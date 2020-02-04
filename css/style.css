@@ -1,21 +1,97 @@
+/* CSS TABLE OF CONTENTS 
+  # GLOBALS
+    # RESET
+    # BODY SETTINGS
+  # TYPOGRAPHY
+    # HEADINGS
+    # PARAGRAPHS
+    # LINKS
+    # TYPE SPECIMEN
+  # MEDIA
+    # IMAGES
+  # COMPONENTS
+    # BUTTONS
+  # LAYOUT
+    # CONTAINER
+    # BESPOKE LAYOUT HELPERS
+  # STRUCTURE
+    # HEADER
+    # FOOTER
+    # NAV
+    # MAIN
+    # SECTIONS
+  # ANIMATIONS
+    # @KEYFRAME
+    # SCROLL-TRIGGERED
+*/
+
 /* GROBAL RESETS */
   * { box-sizing: border-box; }
-body {
-  margin: 0;
-}
 
 
-/* GLOVAL COLORS */
+
+/* GLOVAL BODY SETTINGS */
 body {
-  background: rgba(0,0,0,.8);
-  color: rgba(49, 45, 45, 0.8);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  font-size: 87.5%;
+  line-height: 1.4;
+  margin: 0 auto;
+  background-color: #ddd;
+  min-height: 100vh;
+} 
+
+
+/* GROBAL TYPOGRAPHY */
+ 
+h1,h2,h3 { font-weight: normal;}
+p { max-width: 35em;}
+a {color: rgba(252, 249, 249, 0.8);
+  text-decoration: none;
 }
+a:hover {
+  color: rgba(0,0,0,1);
+}
+
+/* TYPE SPECIMEN */
+.hedaline {
+  font-size: 4em;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 .4em 0;
+}
+.subhedaline {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1;
+  margin: 0 0 .6em 0;
+  color:rgba(0,0,0,.4);
+}
+
+/* MEDIA */
+
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  border: 1px solid rgba(252, 249, 249, 0.8);
+  border-radius: 3em;
+  padding: 1em;
+  margin: .5em;
+}
+.button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(0,0,0,1);
+  border-color: rgba(255, 255, 255, 1);
+}
+
 
 /* BESPOKE LAYOUT STRUCTURE */
 body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+ 
 }
  .site-header {
   display: flex;
@@ -24,15 +100,15 @@ body {
   
 
   main {
- display:grid;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    } 
+
 .site-nav ul li {
   display: flex;
   list-style: none;
-
 }
  
 
@@ -46,9 +122,9 @@ align-items: center;
   /* backgraound-image: none !important; */
   /* border-color: rgba(0, 0, 0 ,0) !important; }*/
 
-body {
+/* body {
   background-color:rgba(255,255,0,.2) !important; 
 }
 .site-id { background-color:rgba(255,0,0,.2) !important; }
 .site-nav { background-color:rgba(0,255,0,.2) !important; }
-.site-footer { background-color:rgba(0,0,255,.2) !important; }
+.site-footer { background-color:rgba(0,0,255,.2) !important; } */
