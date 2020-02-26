@@ -28,11 +28,10 @@
 /* GROBAL RESETS */
   * {
   box-sizing: border-box; 
- 
-  padding: 10px;
- 
 }
-
+body {
+  margin: 0;
+}
 
 
 /* GLOVAL BODY SETTINGS */
@@ -41,9 +40,6 @@ body {
   font-weight: 400;
   font-size: 87.5%;
   line-height: 1.4;
-  margin: 0 auto;
-  background-color:rgba(221, 221, 221, 1);
-  min-height: 100vh;
 } 
 
 
@@ -51,6 +47,18 @@ body {
  
 h1,h2,h3 { font-weight: normal;}
 p { max-width: 35em;}
+
+@media (min-width: 768px) {
+p.two-col {
+  column-count: 2;
+  column-gap: 4em;
+  max-width: 50em;
+
+}}
+/* GROBAL COLORS */
+body {
+  background:rgba(221, 221, 221, 1);
+}
 a {color: rgba(82, 79, 79);
   text-decoration: none;
 }
@@ -76,6 +84,14 @@ a:hover {
 /* MEDIA */
 img {
   max-width: 100%;
+  height: auto;
+}
+img.circular {
+  display: block;
+  border-radius: 100%;
+  margin-bottom: 3em;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -117,13 +133,38 @@ body {
   align-items: center;
     } 
 
-.site-nav ul li {
-  display: flex;
-  list-style: none;
-}
+
  
 /* SITE NAVIGATION */
+.site-navigation ul li {
+  display: inline-block;
+  list-style: none;
+}
 
+/* ABOUT PAGE */
+body.about {
+background-color:rgba(200,200,200,1);
+}
+
+/* PROJECT PAGE */
+body.project  {
+  background-color: rgba(255,255,255,1);
+}
+
+/* ANIMATION */
+@keyframes slide-in {
+  from { transform: translate(0,-20px); opacity: 0; }
+  to { transform: translate(0,0); opacity: 1; }
+}
+.slide-in-parent > * {
+  opacity: 0;
+  animation: slide-in ease-in-out;
+  animation-fill-mode: .4s;
+  animation-delay: 0;
+}
+.slide-in-parent > *:nth-child(2) { animation-delay: .15s; }
+.slide-in-parent > *:nth-child(3) { animation-delay: .25s; }
+.slide-in-parent > *:nth-child(4) { animation-delay: .35s; }
 
   
 
@@ -141,3 +182,15 @@ body {
 .site-id { background-color:rgba(255,0,0,.2) !important; }
 .site-nav { background-color:rgba(0,255,0,.2) !important; }
 .site-footer { background-color:rgba(0,0,255,.2) !important; }  */
+
+/* BESPOKE GRIDE SYSTEM */
+.row {
+  display: flex;
+  align-items: center;
+}
+.col {
+  margin: 2%;
+}
+.half { width: 46% }
+.third { width: 29.3333% }
+.tow-thirds { width: 62.6666% }
